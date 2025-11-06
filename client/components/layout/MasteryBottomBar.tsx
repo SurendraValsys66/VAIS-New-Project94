@@ -686,8 +686,13 @@ export default function MasteryBottomBar() {
 
               {/* Bottom text */}
               {!isAnimatingMinimize && (
-                <div className="text-center text-[12px] font-semibold">
-                  Your VAIS mastery: {percent}%
+                <div className="text-center space-y-1">
+                  <div className="text-[12px] font-semibold">
+                    Your VAIS mastery: {percent}%
+                  </div>
+                  <div className="text-[11px] text-white/90">
+                    Just a few more steps to claim your 50 free credits!
+                  </div>
                 </div>
               )}
             </motion.div>
