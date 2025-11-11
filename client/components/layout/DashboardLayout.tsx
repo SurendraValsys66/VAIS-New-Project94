@@ -1073,11 +1073,36 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
                       {/* Daily Limit Progress Bar */}
                       <div className="px-4 py-4 border-b border-gray-200">
+                        <style>{`
+                          @keyframes animateStripes {
+                            0% {
+                              background-position: 0 0;
+                            }
+                            100% {
+                              background-position: 30px 0;
+                            }
+                          }
+                          .animated-striped-progress {
+                            background: linear-gradient(
+                              90deg,
+                              #FF7A00,
+                              #FF8F1F,
+                              #FF7A00
+                            );
+                            background-size: 30px 100%;
+                            animation: animateStripes 1.5s linear infinite;
+                          }
+                        `}</style>
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-xs font-semibold text-gray-700">Daily Limit</span>
                           <span className="text-xs font-semibold text-valasys-orange">45/100</span>
                         </div>
-                        <Progress value={45} className="h-2" />
+                        <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                          <div
+                            className="animated-striped-progress h-full rounded-full transition-all duration-500"
+                            style={{ width: "45%" }}
+                          />
+                        </div>
                         <p className="text-xs text-gray-500 mt-2">55 lookups remaining today</p>
                       </div>
 
