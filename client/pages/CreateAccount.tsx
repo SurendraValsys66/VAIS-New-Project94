@@ -418,10 +418,7 @@ export default function CreateAccount() {
                     >
                       Master Subscriber Agreement
                     </button>
-                    <span
-                      aria-hidden="true"
-                      className="text-red-500 ml-1"
-                    >
+                    <span aria-hidden="true" className="text-red-500 ml-1">
                       *
                     </span>
                   </label>

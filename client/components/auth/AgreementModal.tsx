@@ -208,7 +208,8 @@ export default function AgreementModal({
   const [hasAgreed, setHasAgreed] = useState(false);
   const [agreesToTerms, setAgreesToTerms] = useState(false);
 
-  const allCheckboxesChecked = hasRead && hasUnderstood && hasAgreed && agreesToTerms;
+  const allCheckboxesChecked =
+    hasRead && hasUnderstood && hasAgreed && agreesToTerms;
 
   const handleConfirm = () => {
     if (allCheckboxesChecked) {
@@ -231,7 +232,8 @@ export default function AgreementModal({
             Master Subscriber Agreement
           </DialogTitle>
           <DialogDescription className="mt-2 text-valasys-gray-600">
-            Please review the document and confirm your understanding before proceeding
+            Please review the document and confirm your understanding before
+            proceeding
           </DialogDescription>
         </DialogHeader>
 
@@ -298,7 +300,9 @@ export default function AgreementModal({
                   <Checkbox
                     id="agreesToTerms"
                     checked={agreesToTerms}
-                    onCheckedChange={(checked) => setAgreesToTerms(checked === true)}
+                    onCheckedChange={(checked) =>
+                      setAgreesToTerms(checked === true)
+                    }
                     className="w-5 h-5 rounded-none"
                   />
                   <label
