@@ -588,6 +588,15 @@ export default function Settings() {
                       <ArrowRight className="w-4 h-4 mr-2" />
                       Upgrade Subscription
                     </Button>
+
+                    {/* Cancel Subscription Button */}
+                    <Button
+                      onClick={() => setCancelSubscriptionOpen(true)}
+                      variant="outline"
+                      className="w-full mt-2 border-red-200 text-red-600 hover:bg-red-50 hover:text-red-700"
+                    >
+                      Cancel Subscription
+                    </Button>
                   </CardContent>
                 </Card>
 
