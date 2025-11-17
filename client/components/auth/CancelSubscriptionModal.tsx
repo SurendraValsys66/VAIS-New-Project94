@@ -283,10 +283,9 @@ export default function CancelSubscriptionModal({
                 id="cancel-email"
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                readOnly
                 placeholder="your.email@company.com"
-                required
-                className="border-gray-300 focus:border-valasys-orange focus:ring-valasys-orange/20"
+                className="border-gray-300 bg-gray-50 cursor-not-allowed"
               />
               <p className="text-xs text-gray-600">
                 Confirmation will be sent to this email address
