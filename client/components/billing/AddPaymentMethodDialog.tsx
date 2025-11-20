@@ -335,8 +335,8 @@ export function AddPaymentMethodDialog({
             <div className="space-y-6 animate-in fade-in slide-in-from-top-2 duration-300">
               <div className="space-y-5">
                 <div>
-                  <label className="block text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                    <span className="inline-flex items-center justify-center w-6 h-6 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">1</span>
+                  <label className="block text-xs md:text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
+                    <span className="inline-flex items-center justify-center w-5 md:w-6 h-5 md:h-6 bg-gradient-to-br from-valasys-orange to-valasys-orange-light text-white text-xs font-bold rounded-full">1</span>
                     Card Number
                   </label>
                   <div className="relative group">
