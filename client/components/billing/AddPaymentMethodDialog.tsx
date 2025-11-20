@@ -367,43 +367,43 @@ export function AddPaymentMethodDialog({
                   )}
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
                   <div>
-                    <label className="block text-sm font-bold text-gray-900 mb-2">Expires</label>
+                    <label className="block text-xs md:text-sm font-bold text-gray-900 mb-2">Expires</label>
                     <Input
                       placeholder="MM/YY"
                       value={formData.expiryDate}
                       onChange={handleExpiryChange}
-                      className={`h-12 text-lg font-mono font-bold tracking-widest transition-all border-2 focus:ring-2 focus:ring-blue-400 focus:ring-opacity-30 ${
+                      className={`h-10 md:h-12 text-base md:text-lg font-mono font-bold tracking-widest transition-all border-2 focus:ring-2 focus:ring-valasys-orange/30 ${
                         getErrorMessage("expiryDate")
                           ? "border-red-500 focus:border-red-500"
-                          : "border-gray-200 focus:border-blue-500"
+                          : "border-gray-200 focus:border-valasys-orange"
                       }`}
                       maxLength={5}
                     />
                     {getErrorMessage("expiryDate") && (
-                      <div className="flex items-center gap-2 mt-2 text-sm text-red-600 animate-in fade-in">
-                        <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                      <div className="flex items-center gap-2 mt-1.5 md:mt-2 text-xs md:text-sm text-red-600 animate-in fade-in">
+                        <AlertCircle className="w-3 md:w-4 h-3 md:h-4 flex-shrink-0" />
                         <span>{getErrorMessage("expiryDate")}</span>
                       </div>
                     )}
                   </div>
                   <div>
-                    <label className="block text-sm font-bold text-gray-900 mb-2">CVC</label>
+                    <label className="block text-xs md:text-sm font-bold text-gray-900 mb-2">CVC</label>
                     <Input
                       placeholder="123"
                       value={formData.cvc}
                       onChange={handleCvcChange}
-                      className={`h-12 text-lg font-mono font-bold tracking-widest transition-all border-2 focus:ring-2 focus:ring-blue-400 focus:ring-opacity-30 ${
+                      className={`h-10 md:h-12 text-base md:text-lg font-mono font-bold tracking-widest transition-all border-2 focus:ring-2 focus:ring-valasys-orange/30 ${
                         getErrorMessage("cvc")
                           ? "border-red-500 focus:border-red-500"
-                          : "border-gray-200 focus:border-blue-500"
+                          : "border-gray-200 focus:border-valasys-orange"
                       }`}
                       maxLength={4}
                     />
                     {getErrorMessage("cvc") && (
-                      <div className="flex items-center gap-2 mt-2 text-sm text-red-600 animate-in fade-in">
-                        <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                      <div className="flex items-center gap-2 mt-1.5 md:mt-2 text-xs md:text-sm text-red-600 animate-in fade-in">
+                        <AlertCircle className="w-3 md:w-4 h-3 md:h-4 flex-shrink-0" />
                         <span>{getErrorMessage("cvc")}</span>
                       </div>
                     )}
