@@ -391,38 +391,29 @@ export function AddPaymentMethodDialog({
                       />
                       <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
                         {/* VISA */}
-                        <svg className={`w-7 h-5 transition-opacity ${cardNetwork === "Visa" ? "opacity-100" : "opacity-20"}`} viewBox="0 0 48 32" fill="none">
+                        <svg className={`w-7 h-5 transition-opacity ${cardNetwork === "Visa" ? "opacity-100" : "opacity-30"}`} viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect width="48" height="32" rx="3" fill="#1434CB"/>
-                          <path d="M18 20L16 12h-2.5l3 8M30 20l-2.5-8h-2l2.5 8M35 20l2-8h2.5l-2 8" stroke="white" strokeWidth="0.5"/>
-                          <text x="24" y="16" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold" dominantBaseline="middle">VISA</text>
+                          <text x="24" y="18" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" dominantBaseline="middle">VISA</text>
                         </svg>
 
                         {/* Mastercard */}
-                        <svg className={`w-7 h-5 transition-opacity ${cardNetwork === "Mastercard" ? "opacity-100" : "opacity-20"}`} viewBox="0 0 48 32" fill="none">
+                        <svg className={`w-7 h-5 transition-opacity ${cardNetwork === "Mastercard" ? "opacity-100" : "opacity-30"}`} viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect width="48" height="32" rx="3" fill="white" stroke="#E5E7EB" strokeWidth="0.5"/>
-                          <circle cx="16" cy="16" r="10" fill="#EB001B"/>
-                          <circle cx="32" cy="16" r="10" fill="#FF5F00"/>
-                          <circle cx="24" cy="16" r="10" fill="url(#grad)" opacity="0.7"/>
-                          <defs>
-                            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" style={{stopColor: "#EB001B", stopOpacity: 1}} />
-                              <stop offset="100%" style={{stopColor: "#FF5F00", stopOpacity: 1}} />
-                            </linearGradient>
-                          </defs>
+                          <circle cx="16" cy="16" r="9" fill="#EB001B"/>
+                          <circle cx="32" cy="16" r="9" fill="#FF5F00"/>
+                          <circle cx="24" cy="16" r="9" fill="#FF5F00" opacity="0.6"/>
                         </svg>
 
                         {/* American Express */}
-                        <svg className={`w-7 h-5 transition-opacity ${cardNetwork === "American Express" ? "opacity-100" : "opacity-20"}`} viewBox="0 0 48 32" fill="none">
+                        <svg className={`w-7 h-5 transition-opacity ${cardNetwork === "American Express" ? "opacity-100" : "opacity-30"}`} viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect width="48" height="32" rx="3" fill="#006FCF"/>
-                          <path d="M8 10v12h32V10H8m2 2h6v2h-6v-2m0 3h8v1h-8v-1m0 2h6v2h-6v-2m10-7h8v8h-8v-8m2 2v4h4v-4h-4m8-2h6l2 3l2-3h6v8h-2v-6h-4l-2 3l-2-3h-4v6h-2v-8" fill="white"/>
-                          <text x="24" y="17" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold" dominantBaseline="middle">AMEX</text>
+                          <text x="24" y="18" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold" dominantBaseline="middle">AMEX</text>
                         </svg>
 
                         {/* Discover */}
-                        <svg className={`w-7 h-5 transition-opacity ${cardNetwork === "Discover" ? "opacity-100" : "opacity-20"}`} viewBox="0 0 48 32" fill="none">
+                        <svg className={`w-7 h-5 transition-opacity ${cardNetwork === "Discover" ? "opacity-100" : "opacity-30"}`} viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect width="48" height="32" rx="3" fill="#FF6000"/>
-                          <circle cx="24" cy="16" r="6" fill="white"/>
-                          <text x="15" y="18" fill="white" fontSize="4" fontWeight="bold">DIS</text>
+                          <circle cx="28" cy="16" r="5" fill="white"/>
                         </svg>
                       </div>
                     </div>
