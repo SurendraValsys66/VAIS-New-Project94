@@ -123,21 +123,41 @@ export function FeedbackModal({ open, onOpenChange }: FeedbackModalProps) {
               Please rate so we can improve the quality of our service
             </p>
 
-            {/* Emoji Rating */}
+            {/* GIF Rating */}
             <div className="flex justify-center items-center gap-4 py-4">
               {ratingEmojis.map((item) => (
                 <button
                   key={item.value}
                   onClick={() => setRating(item.value)}
+                  onMouseEnter={() => setHoveredRating(item.value)}
+                  onMouseLeave={() => setHoveredRating(null)}
                   className={cn(
-                    "transition-all duration-200 transform hover:scale-110",
+                    "transition-all duration-200 transform relative",
                     rating === item.value
-                      ? "scale-150 bg-valasys-orange rounded-full p-2"
-                      : "scale-100 hover:scale-120 opacity-70 hover:opacity-100"
+                      ? "scale-150"
+                      : "scale-100 hover:scale-120",
+                    rating === item.value && "p-2 bg-valasys-orange rounded-full"
                   )}
                   title={item.label}
+                  type="button"
                 >
-                  <span className="text-4xl">{item.emoji}</span>
+                  <img
+                    ref={(el) => {
+                      if (el) gifRefs.current[item.value] = el;
+                    }}
+                    src={item.gif}
+                    alt={item.label}
+                    className="w-16 h-16 rounded-full object-cover"
+                    onLoad={(e) => {
+                      const img = e.currentTarget as HTMLImageElement;
+                      if (rating !== item.value && hoveredRating !== item.value) {
+                        img.style.opacity = "0.7";
+                      }
+                    }}
+                  />
+                  {(rating === item.value || hoveredRating === item.value) && (
+                    <div className="absolute inset-0 rounded-full ring-2 ring-valasys-orange pointer-events-none" />
+                  )}
                 </button>
               ))}
             </div>
