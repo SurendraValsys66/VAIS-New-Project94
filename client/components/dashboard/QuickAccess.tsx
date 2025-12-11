@@ -43,6 +43,13 @@ export default function QuickAccess({
             <Button
               variant="outline"
               size="sm"
+              onClick={onFeedback}
+            >
+              <MessageCircle className="w-4 h-4 mr-2" /> Feedback
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
               onClick={() => onNavigate?.("abm")}
             >
               <Users className="w-4 h-4 mr-2" /> Verify ABM
