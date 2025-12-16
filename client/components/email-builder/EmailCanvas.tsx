@@ -49,6 +49,8 @@ export const EmailCanvas: React.FC<EmailCanvasProps> = ({
               <input
                 id="subject"
                 type="text"
+                value={templateSubject}
+                onChange={(e) => onTemplateSubjectChange(e.target.value)}
                 placeholder="Email subject"
                 className="text-sm mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-valasys-orange focus:border-transparent"
               />
@@ -62,11 +64,13 @@ export const EmailCanvas: React.FC<EmailCanvasProps> = ({
                   id="bgColor"
                   type="color"
                   value={template.backgroundColor}
+                  onChange={(e) => onBackgroundColorChange(e.target.value)}
                   className="text-sm w-12 h-10 border border-gray-300 rounded cursor-pointer"
                 />
                 <input
                   type="text"
                   value={template.backgroundColor}
+                  onChange={(e) => onBackgroundColorChange(e.target.value)}
                   className="text-sm flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-valasys-orange focus:border-transparent"
                   placeholder="#ffffff"
                 />
