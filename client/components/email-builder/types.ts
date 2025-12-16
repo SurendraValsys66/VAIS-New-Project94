@@ -1,10 +1,16 @@
 export type BlockType =
   | "text"
+  | "title"
   | "image"
+  | "video"
   | "button"
+  | "dynamicContent"
+  | "logo"
+  | "social"
+  | "html"
   | "divider"
-  | "header"
-  | "footer"
+  | "product"
+  | "navigation"
   | "spacer";
 
 export interface TextBlock {
