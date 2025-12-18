@@ -180,9 +180,7 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({
             onContentChange={(field, value) =>
               onBlockUpdate({ ...block, [field]: value })
             }
-            onSocialUpdate={(social) =>
-              onBlockUpdate({ ...block, social })
-            }
+            onSocialUpdate={(social) => onBlockUpdate({ ...block, social })}
             onElementSelect={onFooterElementSelect}
           />
         </div>

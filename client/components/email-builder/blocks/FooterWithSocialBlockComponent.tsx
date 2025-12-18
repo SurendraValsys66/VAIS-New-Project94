@@ -13,9 +13,19 @@ interface FooterWithSocialBlockComponentProps {
 
 export const FooterWithSocialBlockComponent: React.FC<
   FooterWithSocialBlockComponentProps
-> = ({ block, isSelected, selectedElement, onContentChange, onSocialUpdate, onElementSelect }) => {
-
-  const handleFieldChange = (field: keyof typeof block, subField: string, value: string) => {
+> = ({
+  block,
+  isSelected,
+  selectedElement,
+  onContentChange,
+  onSocialUpdate,
+  onElementSelect,
+}) => {
+  const handleFieldChange = (
+    field: keyof typeof block,
+    subField: string,
+    value: string,
+  ) => {
     const updatedField = { ...block[field], [subField]: value };
     onContentChange(field, updatedField);
   };
@@ -39,7 +49,8 @@ export const FooterWithSocialBlockComponent: React.FC<
           onClick={() => onElementSelect?.("social")}
           className={`py-4 px-2 cursor-pointer hover:bg-gray-50 rounded transition-all ${
             selectedElement === "social" ? "ring-2 ring-valasys-orange" : ""
-          }`}>
+          }`}
+        >
           <div className="flex flex-wrap justify-center gap-2">
             {block.social.platforms.map((platform, index) => {
               const iconColor = getIconColor(platform.icon);
@@ -80,7 +91,9 @@ export const FooterWithSocialBlockComponent: React.FC<
         {/* Enterprise Name */}
         <div
           className={`cursor-pointer hover:bg-gray-50 rounded p-2 transition-all ${
-            selectedElement === "enterpriseName" ? "ring-2 ring-valasys-orange" : ""
+            selectedElement === "enterpriseName"
+              ? "ring-2 ring-valasys-orange"
+              : ""
           }`}
           onClick={() => onElementSelect?.("enterpriseName")}
         >
@@ -161,7 +174,9 @@ export const FooterWithSocialBlockComponent: React.FC<
         {/* Subscription Text */}
         <div
           className={`cursor-pointer hover:bg-gray-50 rounded p-2 transition-all ${
-            selectedElement === "subscriptionText" ? "ring-2 ring-valasys-orange" : ""
+            selectedElement === "subscriptionText"
+              ? "ring-2 ring-valasys-orange"
+              : ""
           }`}
           onClick={() => onElementSelect?.("subscriptionText")}
         >
@@ -201,7 +216,9 @@ export const FooterWithSocialBlockComponent: React.FC<
         {/* Unsubscribe Link */}
         <div
           className={`cursor-pointer hover:bg-gray-50 rounded p-2 transition-all ${
-            selectedElement === "unsubscribeLink" ? "ring-2 ring-valasys-orange" : ""
+            selectedElement === "unsubscribeLink"
+              ? "ring-2 ring-valasys-orange"
+              : ""
           }`}
           onClick={() => onElementSelect?.("unsubscribeLink")}
         >
@@ -248,9 +265,7 @@ export const FooterWithSocialBlockComponent: React.FC<
   );
 };
 
-function getIconColor(
-  platform: string,
-): string {
+function getIconColor(platform: string): string {
   const colorMap: { [key: string]: string } = {
     facebook: "#4267B2",
     instagram: "#E4405F",

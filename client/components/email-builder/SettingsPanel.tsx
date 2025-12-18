@@ -2392,7 +2392,10 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                     onChange={(e) =>
                       onBlockUpdate({
                         ...block,
-                        social: { ...block.social, size: e.target.value as any },
+                        social: {
+                          ...block.social,
+                          size: e.target.value as any,
+                        },
                       })
                     }
                     className="w-full border border-gray-300 rounded px-2 py-1 text-sm"
@@ -2403,7 +2406,10 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   </select>
                 </div>
                 <div>
-                  <Label htmlFor="socialShape" className="text-xs text-gray-700">
+                  <Label
+                    htmlFor="socialShape"
+                    className="text-xs text-gray-700"
+                  >
                     Shape
                   </Label>
                   <select
@@ -2412,7 +2418,10 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                     onChange={(e) =>
                       onBlockUpdate({
                         ...block,
-                        social: { ...block.social, shape: e.target.value as any },
+                        social: {
+                          ...block.social,
+                          shape: e.target.value as any,
+                        },
                       })
                     }
                     className="w-full border border-gray-300 rounded px-2 py-1 text-sm"
@@ -2423,7 +2432,10 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   </select>
                 </div>
                 <div>
-                  <Label htmlFor="socialTheme" className="text-xs text-gray-700">
+                  <Label
+                    htmlFor="socialTheme"
+                    className="text-xs text-gray-700"
+                  >
                     Theme
                   </Label>
                   <select
@@ -2432,7 +2444,10 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                     onChange={(e) =>
                       onBlockUpdate({
                         ...block,
-                        social: { ...block.social, theme: e.target.value as any },
+                        social: {
+                          ...block.social,
+                          theme: e.target.value as any,
+                        },
                       })
                     }
                     className="w-full border border-gray-300 rounded px-2 py-1 text-sm"
@@ -2443,7 +2458,10 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   </select>
                 </div>
                 <div>
-                  <Label htmlFor="socialSpacing" className="text-xs text-gray-700">
+                  <Label
+                    htmlFor="socialSpacing"
+                    className="text-xs text-gray-700"
+                  >
                     Space between icons (px)
                   </Label>
                   <Input
@@ -2489,7 +2507,9 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   />
                 </div>
                 <div>
-                  <Label className="text-xs text-gray-700">Font Size (px)</Label>
+                  <Label className="text-xs text-gray-700">
+                    Font Size (px)
+                  </Label>
                   <Input
                     type="number"
                     value={block.enterpriseName.fontSize}
@@ -2598,7 +2618,9 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   />
                 </div>
                 <div>
-                  <Label className="text-xs text-gray-700">Font Size (px)</Label>
+                  <Label className="text-xs text-gray-700">
+                    Font Size (px)
+                  </Label>
                   <Input
                     type="number"
                     value={block.address.fontSize}
@@ -2712,7 +2734,9 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   />
                 </div>
                 <div>
-                  <Label className="text-xs text-gray-700">Font Size (px)</Label>
+                  <Label className="text-xs text-gray-700">
+                    Font Size (px)
+                  </Label>
                   <Input
                     type="number"
                     value={block.subscriptionText.fontSize}
@@ -2844,7 +2868,9 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   />
                 </div>
                 <div>
-                  <Label className="text-xs text-gray-700">Font Size (px)</Label>
+                  <Label className="text-xs text-gray-700">
+                    Font Size (px)
+                  </Label>
                   <Input
                     type="number"
                     value={block.unsubscribeLink.fontSize}
@@ -2933,7 +2959,9 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
                   />
                 </div>
                 <div>
-                  <Label className="text-xs text-gray-700">Text Decoration</Label>
+                  <Label className="text-xs text-gray-700">
+                    Text Decoration
+                  </Label>
                   <select
                     value={block.unsubscribeLink.textDecoration}
                     onChange={(e) =>

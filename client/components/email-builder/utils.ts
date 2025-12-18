@@ -338,7 +338,8 @@ export function createFooterWithSocialBlock(): FooterWithSocialBlock {
       margin: 0,
     },
     subscriptionText: {
-      content: "You've received it because you've subscribed to our newsletter.",
+      content:
+        "You've received it because you've subscribed to our newsletter.",
       fontSize: 12,
       fontColor: "#999999",
       fontWeight: "normal",
