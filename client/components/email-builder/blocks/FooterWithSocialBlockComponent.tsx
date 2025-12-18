@@ -200,10 +200,12 @@ export const FooterWithSocialBlockComponent: React.FC<
 
         {/* Unsubscribe Link */}
         <div
-          className="cursor-pointer hover:bg-gray-50 rounded p-2"
-          onClick={() => setEditingField("unsubscribeLink")}
+          className={`cursor-pointer hover:bg-gray-50 rounded p-2 transition-all ${
+            selectedElement === "unsubscribeLink" ? "ring-2 ring-valasys-orange" : ""
+          }`}
+          onClick={() => onElementSelect?.("unsubscribeLink")}
         >
-          {editingField === "unsubscribeLink" ? (
+          {selectedElement === "unsubscribeLink" ? (
             <div className="space-y-2">
               <input
                 type="text"
