@@ -163,7 +163,7 @@ export const EmailBuilder: React.FC<EmailBuilderProps> = ({
     (block: ContentBlock, position: number) => {
       const duplicatedBlock: ContentBlock = {
         ...JSON.parse(JSON.stringify(block)),
-        id: Math.random().toString(36).substring(2, 15),
+        id: generateId(),
       };
       setTemplate((prev) => {
         const newBlocks = [...prev.blocks];
