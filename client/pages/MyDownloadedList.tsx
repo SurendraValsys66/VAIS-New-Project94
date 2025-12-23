@@ -1592,16 +1592,17 @@ export default function MyDownloadedList() {
               </div>
             )}
 
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <Badge variant="secondary" className="bg-blue-50 text-blue-700">
-                <UploadCloud className="h-3 w-3 mr-1" /> CSV ready to import
+            <div className="flex flex-wrap items-center gap-2 mb-6">
+              <Badge className="bg-blue-100 text-blue-800 border border-blue-300 rounded-full px-3 py-1">
+                <UploadCloud className="h-3 w-3 mr-1.5" />
+                CSV Ready
               </Badge>
-              <Badge variant="secondary" className="bg-green-50 text-green-700">
-                <ShieldCheck className="h-3 w-3 mr-1" /> Email-based
-                de-duplication recommended
+              <Badge className="bg-green-100 text-green-800 border border-green-300 rounded-full px-3 py-1">
+                <ShieldCheck className="h-3 w-3 mr-1.5" />
+                De-duplication by Email
               </Badge>
               <Badge
-                variant="secondary"
+                className="bg-purple-100 text-purple-800 border border-purple-300 rounded-full px-3 py-1"
                 className="bg-valasys-orange/10 text-valasys-orange"
               >
                 Selected CRM:{" "}
